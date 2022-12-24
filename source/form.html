@@ -9,20 +9,20 @@
 
     <header class="page-header">
       <div class="page-header__wrapper">
-        <a href="index.html" class="page-header__logo">
+        <a class="page-header__logo" href="index.html">
           <img src="images/logo-mobile.svg" width="197" height="38" alt="Cat Energy">
         </a>
-        <nav class="main-nav">
+        <nav class="page-header__main-nav">
           <button class="main-nav__toggle" type="button" aria-label="Закрыть меню"></button>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item site-list__item--current">
-              <a>Подбор программы</a>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -31,87 +31,107 @@
 
     <main class="page-main form-page-main">
       <header class="form-page-main__header">
-        <h1 class="form-page-main__title">
+        <h1 class="header__title">
           Подбор программы<span class="visually-hidden">питания для котов</span>
         </h1>
-        <p class="form-page-main__intro-text">
+        <p class="header__intro-text">
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
       </header>
 
-      <form class="form" action="https://echo.htmlacademy.ru" method="get">
-        <div class="form__wrapper">
+      <form class="program-selection-form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="program-selection-form__wrapper">
           <fieldset>
             <legend class="visually-hidden">Данные кота</legend>
-            <label>
-              Имя:<sup>*</sup>
-              <input type="text" name="cats-name" placeholder="Барсик" required>
-            </label>
-            <label>
-              Вес (КГ):<sup>*</sup>
-              <input type="number" name="cats-weight" placeholder="7" required>
-            </label>
-            <label>
-              Возраст (ЛЕТ):<sup>*</sup>
-              <input type="number" name="cats-age" placeholder="7" required>
-            </label>
+            <ul>
+              <li>
+                <label class="program-selection-form__label">
+                  Имя:<sup>*</sup>
+                  <input class="program-selection-form__input" type="text" name="cats-name" placeholder="Барсик" required>
+                </label>
+              </li>
+              <li>
+                <label class="program-selection-form__label">
+                  Вес (КГ):<sup>*</sup>
+                  <input class="program-selection-form__input" type="number" name="cats-weight" placeholder="7" required>
+                </label>
+              </li>
+              <li>
+                <label class="program-selection-form__label">
+                  Возраст (ЛЕТ):<sup>*</sup>
+                  <input class="program-selection-form__input" type="number" name="cats-age" placeholder="7" required>
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="program-selection-form__fieldset--program-type">
             <legend class="visually-hidden">Тип программы</legend>
-            <label>
-              <input type="radio" name="program-type" value="slim" checked>
-              Похудение
-            </label>
-            <label>
-              <input type="radio" name="program-type" value="pro">
-              Набор массы
-            </label>
-            <label>
-              <input type="radio" name="program-type" value="unknown">
-              Не знаю (нужен ваш совет)
-            </label>
+            <ul>
+              <li>
+                <input type="radio" name="program-type" id="program-type-slim" value="slim" checked>
+                <label class="program-selection-form__label" for="program-type-slim">Похудение</label>
+              </li>
+              <li>
+                <input type="radio" name="program-type" id="program-type-pro" value="pro">
+                <label class="program-selection-form__label" for="program-type-pro">Набор массы</label>
+              </li>
+              <li>
+                <input type="radio" name="program-type" id="program-type-unknown" value="unknown">
+                <label class="program-selection-form__label" for="program-type-unknown">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
           </fieldset>
 
           <fieldset>
-            <legend>Контактные данные (владельца кота)</legend>
-            <label>
-              e-mail:<sup>*</sup>
-              <input type="email" name="cat-owner-email" placeholder="kuklachev@gmail.com" required>
-            </label>
-            <label>
-              Телефон:<sup>*</sup>
-              <input type="email" name="cat-owner-phone" placeholder="8 (960) 900-60-90" required>
-            </label>
+            <legend class="program-selection-form__legend">Контактные данные (владельца кота)</legend>
+            <ul>
+              <li>
+                <label class="program-selection-form__label">
+                  e-mail:<sup>*</sup>
+                  <input class="program-selection-form__input" type="email" name="cat-owner-email" placeholder="kuklachev@gmail.com" required>
+                </label>
+              </li>
+              <li>
+                <label class="program-selection-form__label">
+                  Телефон:<sup>*</sup>
+                  <input class="program-selection-form__input" type="tel" name="cat-owner-phone" placeholder="8 (960) 900-60-90" required>
+                </label>
+              </li>
+            </ul>
           </fieldset>
 
-          <p>
-            <label for="comment">Комментарий</label>
-            <textarea name="comment" id="comment" placeholder="Расскажите обо всех повaдках кота"></textarea>
-          </p>
+          <div>
+            <p class="program-selection-form__legend">Комментарий</p>
+            <label aria-label="Расскажите обо всех повaдках кота">
+              <textarea class="program-selection-form__textarea" name="comment" placeholder="Расскажите обо всех повaдках кота"></textarea>
+            </label>
+          </div>
 
-          <fieldset>
-            <legend>Дополнительно</legend>
-            <p>
-              <input type="checkbox" name="sweetener" id="sweetener" checked>
-              <label for="sweetener">Питьевая вода</label>
-            </p>
-            <p>
-              <input type="checkbox" name="drinking-water" id="drinking-water">
-              <label for="drinking-water">Питьевая вода</label>
-            </p>
-            <p>
-              <input type="checkbox" name="milk" id="milk">
-              <label for="milk">Молоко</label>
-            </p>
-            <p>
-              <input type="checkbox" name="vitamins" id="vitamins">
-              <label for="vitamins">Витамины</label>
-            </p>
+          <fieldset class="program-selection-form__fieldset--additional">
+            <legend class="program-selection-form__legend">Дополнительно</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="sweetener" id="sweetener" checked>
+                <label class="program-selection-form__label" for="sweetener">Сахарозаменитель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="drinking-water" id="drinking-water">
+                <label class="program-selection-form__label" for="drinking-water">Питьевая вода</label>
+              </li>
+              <li>
+                <input type="checkbox" name="milk" id="milk">
+                <label class="program-selection-form__label" for="milk">Молоко</label>
+              </li>
+              <li>
+                <input type="checkbox" name="vitamins" id="vitamins">
+                <label class="program-selection-form__label" for="vitamins">Витамины</label>
+              </li>
+            </ul>
           </fieldset>
 
-          <button class="button form__submit-button" type="submit">Отправить заявку</button>
-          <small><sup>*</sup> &mdash; Обязательные поля</small>
+          <button class="button program-selection-form__submit-button" type="submit">Отправить заявку</button>
+          <small class="program-selection-form__legend"><sup>*</sup> &mdash; Обязательные поля</small>
         </div>
       </form>
     </main>
@@ -131,27 +151,27 @@
         <address class="page-footer__links">
           <ul class="social-links">
             <li>
-              <a href="blank.html">
+              <a class="social-links__link--vk" href="blank.html">
                 <span class="visually-hidden">ВКонтаке</span>
               </a>
             </li>
             <li>
-              <a href="blank.html">
+              <a class="social-links__link--instagram" href="blank.html">
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li>
-              <a href="blank.html">
+              <a class="social-links__link--facebook" href="blank.html">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
           </ul>
           <ul class="copyright-links">
             <li>
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="copyright-links__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
             <li>
-              <a href="https://htmlacademy.ru/intensive/adaptive">
+              <a class="copyright-links__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
                 <img src="images/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
               </a>
             </li>
