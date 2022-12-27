@@ -12,25 +12,25 @@
         <a class="page-header__logo" href="index.html">
           <img src="images/logo-mobile.svg" width="197" height="38" alt="Cat Energy">
         </a>
-        <nav class="main-nav">
+        <nav class="page-header__main-nav">
           <button class="main-nav__toggle" type="button" aria-label="Закрыть меню"></button>
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item">
-              <a href="index.html">Главная</a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="site-list__item site-list__item--current">
-              <a>Каталог продукции</a>
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="page-main">
-      <h1>Питание для котов</h1>
+    <main class="page-main catalog-page-main">
+      <h1 class="visually-hidden">Питание для котов</h1>
       <section class="catalog">
         <h2 class="catalog__title">Каталог продукции</h2>
         <ul class="catalog__list">
@@ -53,7 +53,7 @@
                 <dd>700 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
           <li class="catalog__item goods-card">
             <a class="goods-card__link" href="blank.html">
@@ -74,7 +74,7 @@
                 <dd>1000 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
           <li class="catalog__item goods-card">
             <a class="goods-card__link" href="blank.html">
@@ -95,7 +95,7 @@
                 <dd>700 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
           <li class="catalog__item goods-card">
             <a class="goods-card__link" href="blank.html">
@@ -116,7 +116,7 @@
                 <dd>1000 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
           <li class="catalog__item goods-card">
             <a class="goods-card__link" href="blank.html">
@@ -137,7 +137,7 @@
                 <dd>400 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
           <li class="catalog__item goods-card">
             <a class="goods-card__link" href="blank.html">
@@ -158,7 +158,7 @@
                 <dd>700 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
           <li class="catalog__item goods-card">
             <a class="goods-card__link" href="blank.html">
@@ -179,12 +179,12 @@
                 <dd>500 Р.</dd>
               </p>
             </dl>
-            <a class="goods-card__order-link" href="blank.html">Заказать</a>
+            <a class="button goods-card__order-link" href="blank.html">Заказать</a>
           </li>
-          <li>
-            <p>Показать еще 100500 товаров</p>
-            <p>На самом деле вкусов гораздо больше!</p>
-            <a href="blank.html">Показать все</a>
+          <li class="catalog__item show-all-card">
+            <p class="show-all-card__text">Показать еще 100500 товаров</p>
+            <p class="show-all-card__text">На самом деле вкусов гораздо больше!</p>
+            <a class="button show-all-card__button" href="blank.html">Показать все</a>
           </li>
         </ul>
       </section>
@@ -194,26 +194,46 @@
         <ul class="additional-goods__list">
           <li class="additional-goods__item additional-goods-card">
             <h3 class="additional-goods-card__title">Сахарозаменитель</h3>
-            <p>1 упаковка (100 г)</p>
-            <p>200 Р.</p>
+            <dl class="additional-goods-card__characteristics">
+              <div>
+                <dt>1 упаковка (100 г)</dt>
+                <dd>200 Р.</dd>
+              </div>
+            </dl>
+            <a class="button" href="blank.html">Заказать</a>
           </li>
           <li class="additional-goods__item additional-goods-card">
             <h3 class="additional-goods-card__title">Питьевая вода</h3>
-            <p>5 литров</p>
-            <p>50 Р.</p>
+            <dl class="additional-goods-card__characteristics">
+              <div>
+                <dt>5 литров</dt>
+                <dd>50 Р.</dd>
+              </div>
+            </dl>
+            <a class="button" href="blank.html">Заказать</a>
           </li>
           <li class="additional-goods__item additional-goods-card">
             <h3 class="additional-goods-card__title">Молоко</h3>
-            <p>1 литр</p>
-            <p>100 Р.</p>
+            <dl class="additional-goods-card__characteristics">
+              <div>
+                <dt>1 литр</dt>
+                <dd>100 Р.</dd>
+              </div>
+            </dl>
+            <a class="button" href="blank.html">Заказать</a>
           </li>
           <li class="additional-goods__item additional-goods-card">
             <h3 class="additional-goods-card__title">Витамины</h3>
-            <p>1 упаковка (30 г)</p>
-            <p>300 Р.</p>
+            <dl class="additional-goods-card__characteristics">
+              <div>
+                <dt>1 упаковка (30 г)</dt>
+                <dd>300 Р.</dd>
+              </div>
+            </dl>
+            <a class="button" href="blank.html">Заказать</a>
           </li>
         </ul>
-        <small>
+        <small class="additional-goods__gift-info">
           Закажите все<br>
           и получите чехол для<br>
           кота в подарок!
@@ -236,27 +256,27 @@
         <address class="page-footer__links">
           <ul class="social-links">
             <li>
-              <a href="blank.html">
+              <a class="social-links__link--vk" href="blank.html">
                 <span class="visually-hidden">ВКонтаке</span>
               </a>
             </li>
             <li>
-              <a href="blank.html">
+              <a class="social-links__link--instagram" href="blank.html">
                 <span class="visually-hidden">Instagram</span>
               </a>
             </li>
             <li>
-              <a href="blank.html">
+              <a class="social-links__link--facebook" href="blank.html">
                 <span class="visually-hidden">Facebook</span>
               </a>
             </li>
           </ul>
           <ul class="copyright-links">
             <li>
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+              <a class="copyright-links__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
             <li>
-              <a href="https://htmlacademy.ru/intensive/adaptive">
+              <a class="copyright-links__link--logo" href="https://htmlacademy.ru/intensive/adaptive">
                 <img src="images/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
               </a>
             </li>
