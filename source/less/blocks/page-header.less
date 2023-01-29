@@ -1,8 +1,30 @@
 .page-header__wrapper {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin: 0 auto;
   padding-top: 11px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.page-header__logo-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin: 0;
+}
+
+.page-header__logo {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  justify-self: start;
+  line-height: 0;
+}
+
+.page-header__text-logo {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  justify-self: center;
+  line-height: 0;
 }
