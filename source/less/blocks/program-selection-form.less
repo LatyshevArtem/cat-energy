@@ -1,43 +1,201 @@
+.program-selection-form__wrapper {
+  display: grid;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.program-selection-form__fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.program-selection-form__fieldset--cats-data {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    padding-bottom: 24px;
+  }
+}
+
+.program-selection-form__fieldset--cats-data::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -1px;
+    width: 100vw;
+    height: 1px;
+    background-color: @footer-border-color;
+  }
+}
+
+.program-selection-form__fieldset-legend {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.program-selection-form__field-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.program-selection-form__field-list--cats-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 630px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 569px;
+  }
+}
+
+.field-list__item {
+  display: flex;
+  align-items: center;
+}
+
 .program-selection-form__label {
   font-size: 16px;
   color: @grey;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
-.program-selection-form__fieldset--program-type .program-selection-form__label {
+.field-list__item--cats-name .program-selection-form__label {
+  margin-right: 13px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
+}
+
+.field-list__item--cats-weight .program-selection-form__label {
+  margin-right: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 19px;
+  }
+}
+
+.field-list__item--cats-age .program-selection-form__label {
+  margin-right: 14px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 16px;
+  }
+}
+
+.program-selection-form__input {
+  flex-grow: 1;
+  height: 45px;
+  padding: 14px;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+    padding: 10px;
+  }
+}
+
+.program-selection-form__input,
+.program-selection-form__input::placeholder {
+  font-family: "Oswald";
+  font-size: 16px;
+  line-height: 16px;
+  color: @grey;
+}
+
+.program-selection-form__input::placeholder {
+  text-transform: uppercase;
+}
+
+.program-selection-form__field-list--cats-data .program-selection-form__input {
+  border: 1px solid @cats-data-input-field-border-color;
+}
+
+.program-selection-form__fieldset--program-type {
+  padding-top: 22px;
+  padding-bottom: 19px;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+  }
+}
+
+.program-selection-form__fieldset--program-type::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -1px;
+    width: 100vw;
+    height: 1px;
+    background-color: @footer-border-color;
+  }
+}
+
+.program-selection-form__field-list--program-type .program-selection-form__label {
+  margin-left: 16px;
   color: @grey-400;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
+}
+
+.program-selection-form__fieldset--contact-details {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.program-selection-form__fieldset--cat-habbits {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.program-selection-form__fieldset--additional {
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .program-selection-form__fieldset--additional .program-selection-form__label {
   color: @basic-black;
 }
 
-.program-selection-form__legend {
-  font-size: 24px;
-  line-height: 26px;
-}
+// .program-selection-form__textarea,
+// .program-selection-form__textarea::placeholder {
+//   font-family: "Oswald";
+//   font-size: 16px;
+//   color: @grey;
+// }
 
-.program-selection-form__input,
-.program-selection-form__input::placeholder,
-.program-selection-form__textarea,
-.program-selection-form__textarea::placeholder {
-  font-family: "Oswald";
-  font-size: 16px;
-  line-height: 18px;
-  color: @grey;
-}
-
-.program-selection-form__input::placeholder,
-.program-selection-form__textarea::placeholder {
-  text-transform: uppercase;
-}
-
-.program-selection-form__input {
-  padding: 14px;
-}
+// .program-selection-form__textarea::placeholder {
+//   text-transform: uppercase;
+// }
 
 .program-selection-form__textarea {
-  padding: 9px 12px 15px 9px;
+  padding: 10px 14px;
   resize: none;
 }
 

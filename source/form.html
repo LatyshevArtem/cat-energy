@@ -37,61 +37,63 @@
 
     <main class="page-main form-page-main">
       <header class="form-page-main__header">
-        <h1 class="header__title">
-          Подбор программы<span class="visually-hidden">питания для котов</span>
-        </h1>
-        <p class="header__intro-text">
-          Заполните анкету, и мы подберем программу питания для вашего кота
-        </p>
+        <div class="form-page-main__header-wrapper">
+          <h1 class="header__title">
+            Подбор программы<span class="visually-hidden">питания для котов</span>
+          </h1>
+          <p class="header__intro-text">
+            Заполните анкету, и мы подберем программу питания для вашего кота
+          </p>
+        </div>
       </header>
 
       <form class="program-selection-form" action="https://echo.htmlacademy.ru" method="get">
         <div class="program-selection-form__wrapper">
-          <fieldset>
+          <fieldset class="program-selection-form__fieldset program-selection-form__fieldset--cats-data">
             <legend class="visually-hidden">Данные кота</legend>
-            <ul>
-              <li>
-                <label class="program-selection-form__label">
+            <ul class="program-selection-form__field-list program-selection-form__field-list--cats-data">
+              <li class="field-list__item field-list__item--cats-name">
+                <label class="program-selection-form__label" for="cats-name">
                   Имя:<sup>*</sup>
-                  <input class="program-selection-form__input" type="text" name="cats-name" placeholder="Барсик" required>
                 </label>
+                <input class="program-selection-form__input" type="text" name="cats-name" id="cats-name" placeholder="Барсик" required>
               </li>
-              <li>
-                <label class="program-selection-form__label">
+              <li class="field-list__item field-list__item--cats-weight">
+                <label class="program-selection-form__label" for="cats-weight">
                   Вес (КГ):<sup>*</sup>
-                  <input class="program-selection-form__input" type="number" name="cats-weight" placeholder="7" required>
                 </label>
+                <input class="program-selection-form__input" type="number" name="cats-weight" id="cats-weight" placeholder="7" required>
               </li>
-              <li>
-                <label class="program-selection-form__label">
+              <li class="field-list__item field-list__item--cats-age">
+                <label class="program-selection-form__label" for="cats-age">
                   Возраст (ЛЕТ):<sup>*</sup>
-                  <input class="program-selection-form__input" type="number" name="cats-age" placeholder="7" required>
                 </label>
+                <input class="program-selection-form__input" type="number" name="cats-age" id="cats-age" placeholder="7" required>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset class="program-selection-form__fieldset--program-type">
+          <fieldset class="program-selection-form__fieldset program-selection-form__fieldset--program-type">
             <legend class="visually-hidden">Тип программы</legend>
-            <ul>
-              <li>
+            <ul class="program-selection-form__field-list program-selection-form__field-list--program-type">
+              <li class="field-list__item">
                 <input type="radio" name="program-type" id="program-type-slim" value="slim" checked>
                 <label class="program-selection-form__label" for="program-type-slim">Похудение</label>
               </li>
-              <li>
+              <li class="field-list__item">
                 <input type="radio" name="program-type" id="program-type-pro" value="pro">
                 <label class="program-selection-form__label" for="program-type-pro">Набор массы</label>
               </li>
-              <li>
+              <li class="field-list__item">
                 <input type="radio" name="program-type" id="program-type-unknown" value="unknown">
                 <label class="program-selection-form__label" for="program-type-unknown">Не знаю (нужен ваш совет)</label>
               </li>
             </ul>
           </fieldset>
 
-          <fieldset>
-            <legend class="program-selection-form__legend">Контактные данные (владельца кота)</legend>
-            <ul>
+          <fieldset class="program-selection-form__fieldset program-selection-form__fieldset--contact-details">
+            <legend class="program-selection-form__fieldset-legend">Контактные данные (владельца кота)</legend>
+            <ul class="program-selection-form__field-list">
               <li>
                 <label class="program-selection-form__label">
                   e-mail:<sup>*</sup>
@@ -107,14 +109,15 @@
             </ul>
           </fieldset>
 
-          <div>
-            <p class="program-selection-form__legend">Комментарий</p>
-            <label aria-label="Расскажите обо всех повaдках кота">
-              <textarea class="program-selection-form__textarea" name="comment" placeholder="Расскажите обо всех повaдках кота"></textarea>
+          <fieldset class="program-selection-form__fieldset program-selection-form__fieldset--cat-habbits">
+            <legend class="program-selection-form__fieldset-legend">Комментарий</legend>
+            <label class="visually-hidden" for="cat-habbits">
+              Расскажите обо всех повaдках кота
             </label>
-          </div>
+            <textarea class="program-selection-form__textarea" name="cat-habbits" id="cat-habbits" placeholder="Расскажите обо всех повaдках кота"></textarea>
+          </fieldset>
 
-          <fieldset class="program-selection-form__fieldset--additional">
+          <fieldset class="program-selection-form__fieldset program-selection-form__fieldset--additional">
             <legend class="program-selection-form__legend">Дополнительно</legend>
             <ul>
               <li>
@@ -144,11 +147,21 @@
 
     <footer class="page-footer">
       <section class="map">
-        <div class="page-footer__wrapper">
-          <h2 class="map__title">Приглашаем к сотрудничеству дилеров!</h2>
-          <address class="map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="map__text-wrapper">
+          <div class="map__text-content">
+            <h2 class="map__title">
+              Приглашаем<br>
+              к сотрудничеству<br>
+              дилеров!
+            </h2>
+            <address class="map__address">
+              ул. Большая<br>
+              Конюшенная, д. 19/8<br>
+              Санкт-Петербург
+            </address>
+          </div>
         </div>
-        <iframe class="map__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133182!2d30.315220216032237!3d59.96826598188691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1671604425444!5m2!1sru!2sru" width="600" height="450"></iframe>
+        <iframe class="map__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084133182!2d30.315220216032237!3d59.96826598188691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1671604425444!5m2!1sru!2sru" width="320" height="362"></iframe>
       </section>
       <div class="page-footer__wrapper">
         <a href="index.html">
