@@ -1,4 +1,37 @@
+.goods-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content max-content;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+  }
+}
+
+.goods-card:not(:last-child)::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    position: absolute;
+    left: -20px;
+    bottom: -25px;
+    width: 100vw;
+    height: 1px;
+    background-color: @catalog-page-divider-line-color;
+  }
+}
+
+.goods-card__link {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  justify-self: center;
+  align-self: center;
+  display: block;
+  line-height: 0;
+}
+
 .goods-card__title {
+  margin: 0;
+  margin-bottom: 18px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -6,8 +39,23 @@
 }
 
 .goods-card__characteristics {
+  grid-column-start: 2;
+  align-self: center;
+  margin: 0;
   font-family: "Arial";
   font-size: 12px;
   line-height: 16px;
   color: @grey;
+}
+
+.goods-card__characteristic-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-card__order-link {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  margin-top: 13px;
+  width: 100%;
 }

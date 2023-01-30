@@ -1,4 +1,11 @@
+.additional-goods-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .additional-goods-card__title {
+  margin: 0;
+  margin-bottom: 13px;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -7,8 +14,19 @@
 }
 
 .additional-goods-card__characteristics {
+  margin: 0;
+  margin-bottom: 15px;
   font-family: "Arial";
   font-size: 14px;
   line-height: 14px;
   color: @grey;
+}
+
+.additional-goods-card__characteristic-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional-goods-card__order-link {
+  width: 100%;
 }

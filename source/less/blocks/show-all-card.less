@@ -1,4 +1,31 @@
+.show-all-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 53px;
+}
+
+.show-all-card::before,
+.show-all-card::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 30px;
+  height: 2px;
+  background-color: @grey-300;
+}
+
+.show-all-card::after {
+  transform: rotate(90deg);
+}
+
+.show-all-card__text {
+  margin: 0;
+}
+
 .show-all-card__text:first-of-type {
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 20px;
   color: @black-100;
@@ -6,6 +33,7 @@
 }
 
 .show-all-card__text:last-of-type {
+  margin-bottom: 21px;
   font-family: "Arial";
   font-size: 12px;
   line-height: 16px;
@@ -13,6 +41,7 @@
 }
 
 .show-all-card__button {
+  width: 100%;
   color: @grey;
   background-color: @grey-100;
 }
