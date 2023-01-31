@@ -1,15 +1,57 @@
-.main-nav__toggle {
-  position: absolute;
-  top: 21px;
-  right: 23px;
-  width: 18px;
-  height: 18px;
-  border: none;
-  padding: 0;
-  background-image: url("../images/icons/cross.svg");
-  background-color: transparent;
-  background-position: center center;
+.main-nav {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
 
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav__toggle {
+    position: absolute;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    top: 21px;
+    right: 23px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/icons/cross.svg");
+    background-color: transparent;
+    background-position: center center;
+  }
+
+  .main-nav--closed .main-nav__toggle {
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+    background-color: transparent;
+  }
+
+  .main-nav--closed .main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @basic-black;
+    box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__toggle {
   @media (min-width: @tablet-width) {
     display: none;
   }
@@ -17,9 +59,72 @@
 
 .main-nav__list {
   margin: 0;
+  margin-top: 5px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    margin: 0;
+  }
 }
+
+.main-nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.main-nav__item:first-child {
+  @media (min-width: @tablet-width) {
+    margin-right: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 37px;
+  }
+}
+
+.main-nav__item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-right: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 32px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: @mobile-menu-divider-line-color;
+  }
+
+  .main-nav__item:last-child:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: @mobile-menu-divider-line-color;
+  }
+}
+
 
 .main-nav__link {
   font-family: "Oswald";
@@ -28,4 +133,46 @@
   line-height: 20px;
   color: @basic-black;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: @basic-white;
+  }
+}
+
+.main-nav__link[href]:hover {
+  opacity: 60%;
+}
+
+.main-nav__link[href]:active {
+  opacity: 30%;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__link--current {
+    position: relative;
+  }
+
+  .main-nav__link--current::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: @basic-green;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__link--current::before {
+    bottom: -8px;
+    background-color: @basic-white;
+  }
 }
