@@ -1,13 +1,43 @@
 .additional-goods__gift {
+  width: 280px;
   height: 289px;
+  margin: 0 auto;
   text-align: center;
-  background-image: url("../images/gift-photo-mobile.png");
-  background-position: center 0;
+  background-image:
+    url("../images/icons/gift.svg"),
+    url("../images/gift-photo-mobile.png");
+  background-position:
+    center 58px,
+    center 0;
   background-repeat: no-repeat;
 
+  @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
+    text-align: left;
+  }
+
   @media (min-width: @tablet-width) {
+    width: 708px;
     height: 200px;
-    background-image: url("../images/gift-photo-tablet.png");
+    background-image:
+      url("../images/icons/gift.svg"),
+      url("../images/gift-photo-tablet.png");
+    background-position:
+      78px 57px,
+      center 0;
+    background-size:
+      80px 82px,
+      auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    height: 289px;
+    background-image:
+      url("../images/icons/gift.svg"),
+      url("../images/gift-photo-desktop.png");
+    background-position:
+      center 56px,
+      center 0;
   }
 }
 
@@ -21,5 +51,11 @@
 
   @media (min-width: @tablet-width) {
     top: 71px;
+    left: 423px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 185px;
+    left: 0;
   }
 }

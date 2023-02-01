@@ -245,6 +245,10 @@
   }
 }
 
+.field-list__input-radio:not(:disabled) + .program-selection-form__label:hover::before {
+  border-color: @input-radio-hover;
+}
+
 .field-list__input-radio:checked + .program-selection-form__label::after {
   content: "";
   position: absolute;
@@ -261,6 +265,10 @@
     width: 18px;
     height: 18px;
   }
+}
+
+.field-list__input-radio:disabled + .program-selection-form__label {
+  opacity: 30%;
 }
 
 .program-selection-form__fieldset--contact-details {
@@ -583,6 +591,10 @@
   }
 }
 
+.field-list__input-checkbox:not(:disabled) + .program-selection-form__label:hover::before {
+  border-color: @input-radio-hover;
+}
+
 .field-list__input-checkbox:checked + .program-selection-form__label::after {
   content: "";
   position: absolute;
@@ -596,6 +608,10 @@
     top: 8px;
     left: -48px;
   }
+}
+
+.field-list__input-checkbox:disabled + .program-selection-form__label {
+  opacity: 30%;
 }
 
 .program-selection-form__bottom-wrapper {
