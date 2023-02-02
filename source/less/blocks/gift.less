@@ -11,6 +11,15 @@
     center 0;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../images/icons/gift.svg"),
+      url("../images/gift-photo-mobile@2x.png");
+    background-size:
+      auto,
+      280px 289px;
+  }
+
   @media (min-width: @tablet-width) and (max-width: @tablet-width-only) {
     text-align: left;
   }
@@ -27,6 +36,15 @@
     background-size:
       80px 82px,
       auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../images/icons/gift.svg"),
+        url("../images/gift-photo-tablet@2x.png");
+      background-size:
+        80px 82px,
+        708px 200px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -38,6 +56,15 @@
     background-position:
       center 56px,
       center 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../images/icons/gift.svg"),
+        url("../images/gift-photo-desktop@2x.png");
+      background-size:
+        80px 82px,
+        245px 289px;
+    }
   }
 }
 
