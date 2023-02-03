@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CAT ENERGY</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon16.ico" sizes="16x16">
     <link rel="icon" href="images/favicons/favicon32.ico" sizes="32x32">
     <link rel="icon" href="images/favicons/favicon.svg" sizes="any" type="image/svg+xml">
@@ -60,6 +60,27 @@
           <h1 class="header__title">Функциональное<br>питание для котов</h1>
           <p class="header__slogan">Занялся собой? Займись и котом!</p>
           <picture>
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              srcset="
+                images/desktop-pro-500.webp 1x,
+                images/desktop-pro-500@2x.webp 2x"
+            >
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="
+                images/tablet-pro-500.webp 1x,
+                images/tablet-pro-500@2x.webp 2x"
+              >
+            <source
+              type="image/webp"
+              srcset="
+                images/mobile-pro-500.webp 1x,
+                images/mobile-pro-500@2x.webp 2x"
+            >
+
             <source
               media="(min-width: 1440px)"
               srcset="
@@ -178,6 +199,20 @@
             <div class="slider-cat__images-wrapper">
               <picture>
                 <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/cat-fat.webp 1x,
+                    images/cat-fat@2x.webp 2x"
+                  >
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/cat-fat--mobile.webp 1x,
+                    images/cat-fat--mobile@2x.webp 2x"
+                >
+
+                <source
                   media="(min-width: 768px)"
                   srcset="
                     images/cat-fat.png 1x,
@@ -191,6 +226,20 @@
                 >
               </picture>
               <picture>
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px)"
+                  srcset="
+                    images/cat-skinny.webp 1x,
+                    images/cat-skinny@2x.webp 2x"
+                  >
+                <source
+                  type="image/webp"
+                  srcset="
+                    images/cat-skinny--mobile.webp 1x,
+                    images/cat-skinny--mobile@2x.webp 2x"
+                >
+
                 <source
                   media="(min-width: 768px)"
                   srcset="
